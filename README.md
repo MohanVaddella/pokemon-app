@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Pokemon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Pokemon App! This application allows you to manage Pokemon users, add Pokemon to users, and view a list of Pokemon users.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Home Page**
 
-### `npm start`
+   - Displays information about the application and navigation to other sections.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="949" alt="home-page" src="https://github.com/user-attachments/assets/5e1f8042-c443-45f7-8776-d70160cbd5ad">
+   
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Create Pokemon User**
 
-### `npm test`
+   - Allows users to create new Pokemon users by entering details like Pokemon owner name, Pokemon name, ability, initial position, and speed.
+   
+<img width="958" alt="add-pokemon" src="https://github.com/user-attachments/assets/7caf38cd-77c1-4c00-a4eb-6c9a7a8c7b1a">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+3. **Add Pokemon**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Allows users to add Pokemon to a selected user from a dropdown list. Users can specify Pokemon details and the number to be added.
+   
+<img width="958" alt="add-pokemon-user" src="https://github.com/user-attachments/assets/9a4679f0-6f29-4b1b-935e-ae975c1db3d3">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **List of Pokemon Users**
+   
+   - Lists all Pokemon users with details of the Pokemon they own. Includes functionality to add, edit, or delete individual Pokemon and delete all Pokemon users.
+   
+<img width="959" alt="list-pokemon-users" src="https://github.com/user-attachments/assets/6d19bb2c-ecb2-46db-bbb2-fe303e316a56">
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To install the application, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Clone the Repository:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/MohanVaddella/pokemon-app.git
+   ```
 
-## Learn More
+**Backend**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The backend server is a Node.js application running on PORT 5000. To set up and start the backend server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Navigate to the backend directory:
 
-### Code Splitting
+   ```bash
+   cd pokemon-app/backend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install the required dependencies:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm install express cors axios body-parser uuid
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the server:
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- The backend server will now be running on `http://localhost:5000`.
 
-### Advanced Configuration
+**Frontend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The frontend is a React application running on PORT 3000. To set up and start the frontend server:
 
-### Deployment
+1. Navigate to the frontend directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```bash
+   cd pokemon-app
+   ```
 
-### `npm run build` fails to minify
+2. Install the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm install @fortawesome/fontawesome-free axios react-dom react-router-dom
+   ```
+
+3. Start the server:
+
+   ```bash
+   npm start
+   ```
+
+   - The frontend server will now be running on `http://localhost:3000`.
+
+
+## Detailed Explanation
+
+**Project Structure**
+
+- `pokemon-app/backend/`: Contains the backend server code. This includes Express.js server configuration, API routes, and database interactions.
+
+- `pokemon-app/`: Contains the frontend React application. This includes components, routes, and styling.
+
+**Backend**
+
+****Dependencies:****
+
+- `express`: Web framework for Node.js.
+
+- `cors`: Middleware for enabling Cross-Origin Resource Sharing.
+
+- `axios`: Promise-based HTTP client for making API requests.
+
+- `body-parser`: Middleware for parsing request bodies.
+
+- `uuid`: Library for generating unique IDs.
+
+****API Endpoints:****
+
+- `/api/pokemon-users`: GET request to fetch Pokémon users.
+
+- `/api/add-pokemon`: POST request to add a Pokémon to a user.
+
+- `/api/delete-all-pokemon-users`: DELETE request to delete all Pokémon users.
+
+**Frontend**
+
+****Dependencies:****
+
+- `@fortawesome/fontawesome-free`: Font Awesome icons for UI.
+
+- `axios`: Promise-based HTTP client for making API requests.
+
+- `react-dom`: React library for rendering.
+
+- `react-router-dom`: Library for routing in React applications.
+
+****Components:****
+
+- `HomePage`: Main landing page with links to other features.
+
+- `CreatePokemonUser`: Form for creating a new Pokemon User.
+
+- `AddPokemonUser`: Form for adding Pokémon to a user.
+
+- `ListPokemonUsers`: Table displaying the list of Pokémon users with options for managing them.
+   
