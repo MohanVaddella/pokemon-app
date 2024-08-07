@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "pokemonOwnerName": "Ash",
+      "pokemons": [
+        {
+          "id": "pikachu",
+          "name": "Pikachu",
+          "ability": "Static",
+          "initialPositionX": 50,
+          "initialPositionY": 100,
+          "speed": 5,
+          "direction": "right"
+        }
+      ]
+    }
+  ],
+  "pokemons": [
+    {
+      "id": "pikachu",
+      "name": "Pikachu",
+      "abilities": [
+        "Static",
+        "Lightning Rod"
+      ]
+    },
+    {
+      "pokemonName": "Pikachu",
+      "pokemonAbility": "Static",
+      "ownerName": "Ash",
+      "direction": "North",
+      "initialPositionX": 10,
+      "initialPositionY": 20,
+      "speed": 5
+    },
+    {
+      "pokemonName": "Qwerty",
+      "pokemonAbility": "fast",
+      "ownerName": "Mohan",
+      "direction": "east",
+      "initialPositionX": "2",
+      "initialPositionY": "2",
+      "speed": "30"
+    },
+    {
+      "id": "b6941238-9806-4ce8-8a38-8fca5b080d30",
+      "abilities": [],
+      "initialPositionX": "1",
+      "initialPositionY": "1",
+      "speed": "50",
+      "direction": "south"
+    }
+  ]
+}
